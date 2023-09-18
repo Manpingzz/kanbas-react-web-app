@@ -41,8 +41,8 @@
                 <h2>Jose Annunziato</h2>
                 
                 <form id="text-fields" action="/kanbas/profile/index.html">
-                    <label for="text-fields-name">Name:*</label>
-                    <input id="text-fields-name" placeholder="Jose Annunziato"/>
+                    <label for="text-fields-name">Name:*<input name="fullName" type="text" value="Jose Annunziato"/></label>
+                    
                     
                     <label for="text-fields-pronouns">Pronouns:</label>
                     <select id="select-one-pronouns">
@@ -60,8 +60,7 @@
                 
                     <h3>Biography</h3>
                     <label for="text-fields-biography">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</label><br/>
-                    
-                    <textarea cols="39" rows="3" id="textarea">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                    <textarea name="biography" cols="39" rows="3" id="textarea">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
                 
                     <h3>Links</h3>
                     <ul>
