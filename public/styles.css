@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .wd-main-css-heading {
+    color: green;
+    background-color: yellow;
+  }
+  
+  .wd-fg-color-black {
+    color: black;
+  }
+  .wd-fg-color-white {
+    color: white;
+  }
+  .wd-fg-color-blue {
+    color: #7070ff;
+  }
+  .wd-fg-color-red {
+    color: #ff7070;
+  }
+  .wd-fg-color-green {
+    color: green;
+  }
+  
+  .wd-bg-color-yellow {
+    background-color: #ffff07;
+  }
+  .wd-bg-color-blue {
+    background-color: #7070ff;
+  }
+  .wd-bg-color-red {
+    background-color: #ff7070;
+  }
+  .wd-bg-color-green {
+    background-color: green;
+  }
+  .wd-bg-color-black {
+    background-color: black;
+  }
+  
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .wd-flex-grow-1 {
+    flex-grow: 1;
+  }
+
+.gray-icon {
+    color: gray;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.gray-icon-link {
+    color: gray;
+}
+
+.wd-active {
+    color: black;
+    border-left: 5px solid black;
+}
+.button-sidebar {
+  text-align: left;
+  margin:auto;
+  display: block;
+
+}
+
+.wd-flex-row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.wd-flex-col-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.coming-up-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.view-calendar-link {
+  margin-left: 20px; 
+  text-decoration: none;
+}
+
+
+.select-with-icon {
+  position: relative;
+}
+
+.form-select.form-select-sm {
+  padding: 0.25rem 0.5rem;
+}
+
+/* Hide the native dropdown arrow of the select element */
+.select-with-icon select::-ms-expand {
+  display: none;
+}
+.select-with-icon select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.course-card {
+  margin-top: 30px;
+  margin-bottom: 30px; 
+}
+
+.container {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.custom-table .table {
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #cccccc; /* 修改为灰色框线 */
+  padding: 8px;
+}
+
+
+.rounded-input {
+  border-radius: 6px; /* 设置圆角度数 */
+  padding: 4px 8px; /* 调整内间距 */
+  text-align: center; /* 居中文本 */
+  border: 1px solid #cccccc; /* 灰色边框 */
+}
+
+.gray-button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  background-color: #f1f1f1; /* 浅灰色背景 */
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+}
+.gray-button:hover {
+  background-color: #ddd; /* 当鼠标悬停时，背景色稍微深一点 */
+}
+.btn-unpublish {
+  background-color: #757272; /* 深灰色 */
+  border-color: #808080; /* 深灰色边框 */
+}
+.btn-unpublish:hover {
+  background-color: #808080; /* 深灰色的悬停颜色 */
+}
+
+.table.no-border td, 
+.table.no-border th {
+    border: none;
+}
+
+/* Style for inactive tabs */
+.nav-tabs .nav-link {
+  color: red;
+  border: none;
+}
+
+
+
+/* Style for all tabs */
+.nav-tabs .nav-link {
+  color: red;
+  border: none;
+  border-radius: 0;
+}
+
+/* Style for the active tab */
+.nav-tabs .nav-link.active {
+  color: black;
+  background-color: transparent;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: none;
+}
+
+/* Additional styling for hover state */
+.nav-tabs .nav-link:hover {
+  color: black;
+}
+
+.gray-border {
+  border: 1px solid gray;
+}
+
+
+.kanbasNavigation-sandwish {
+  margin: 40px;
+}
+
+.kanbasNavigation-sandwish-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.kanbasNavigation-sandwish ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+.kanbasNavigation-sandwish-item i {
+  color: red;
+  font-size: 24px;
+  margin: 10px;
+}
+
+.kanbasNavigation-sandwish-item a,
+.kanbasNavigation-sandwish-item a:hover, 
+.kanbasNavigation-sandwish-item a:focus {
+  color: red;
+  width: 100%;
+  text-decoration: none;
+}
+
+.kanbasNavigation-sandwish-item-selected i {
+  margin-left: 25px;
+}
+
+#kanbas-navigation-from-sandwish-on-home-icon {
+  color: gray;
+  font-size: 18px;
+  margin: 0 -20px 0 0;
+  padding: 0;
+}
+
+.no-decoration, .no-decoration:hover, .no-decoration:focus {
+  text-decoration: none;
+}
+
+
+.column {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* For narrower windows, hide the first two columns */
+@media (max-width: 768px) {
+  .first, .second {
+      display: none;
+  }
+
+  .third {
+      width: 100%;
+  }
+}
+
+/* Replace header with blackbar.html content for even narrower windows */
+@media (max-width: 480px) {
+  .container {
+      display: none;
+  }
+  
+  .blackbar {
+      display: block;
+      background-color: black;
+      color: white;
+      padding: 10px;
+  }
+}
+
+
+.column {
+  float: left;
+  width: 33.33%; /* Adjust based on your needs */
+}
+
+#kanbas-navigation, #course-navigation {
+  display: none;
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Media query for the first threshold */
+@media only screen and (max-width: 800px) { /* Adjust 800px based on your needs */
+  #first-column, #second-column {
+      display: none;
+  }
+  #third-column {
+      width: 100%;
+  }
+}
+
+/* Media query for the second threshold */
+@media only screen and (max-width: 500px) { /* Adjust 500px based on your needs */
+  #first-column, #second-column, #third-column {
+      display: none;
+  }
+  #third-column.active {
+      display: block;
+      width: 100%;
+  }
+}
+/* 默认情况下，所有元素都是可见的 */
+
+@media (max-width: 768px) {
+  #kanbasNavIcon,
+  .breadcrumb-item a[href="#"],
+  li[style="padding: 0 10px;"],
+  .breadcrumb-item.active[aria-current="page"] {
+      display: none;
+  }
+}
+.container-fluid.header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container-fluid.header {
+      display: block;
+  }
+}
+
+.top-right-chevron {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1000; /* 确保图标总是在最上面 */
+}

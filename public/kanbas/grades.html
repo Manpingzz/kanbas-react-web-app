@@ -2,121 +2,253 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>home screen</title>
+   <title>grades</title>
+   <link rel="stylesheet" href="/styles.css" />
+   <link rel="stylesheet" href="kanbasNavigation/index.css"/>
+   <link rel="stylesheet" href="course/courseNavigation/index.css" />
+   <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-<!-- <div id="root"></div> -->
-    <table width="100%">
-        <tbody>
-            <tr valign="baseline">
-                <td>
-                    <ul>
-                        <li><a href="/kanbas/accountNavigation.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="/kanbas/courseNavigation.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </td>
+    <div class="d-block d-md-none">
+      <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
+      <a href="/Kanbas/Courses/CourseNavigation/index.html">Course Navigator</a>
+    </div>
+    
+    <div class="d-flex flex-row">
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+            <div style="display: inline-block; height: 100%; vertical-align: middle;">
+                <img src="/images/neulogo.png" alt="NEU Logo" style="width: 70px;">
+            </div>
+            <li><a href="/kanbas/account/accountNavigation.html">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>Account</a></li>
+            <li><a href="/kanbas/dashboard/index.html">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+            <li class="wd-active"><a href="/kanbas/course/courseNavigation/index.html">
+                <i class="fa fa-book" aria-hidden="true"></i>Courses</a></li>
+            <li><a href="/kanbas/calendar/screen.html">
+                <i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+            <li><a href="#">
+                <i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a></li>
+            <li><a href="#">
+                <i class="fa fa-history" aria-hidden="true"></i>History</a></li>
+            <li><a href="#">
+                <i class="fa fa-desktop" aria-hidden="true"></i>Studio</a></li>
+            <li><a href="#">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>Commons</a></li>
+            <li><a href="#">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>Help</a></li>
+        </ul>
+      </div>
+    
+      <div class="container-fluid">
+        <!-- Header Section -->
+        <nav aria-label="breadcrumb" style="background: none; padding: 0;">
+            <ol class="breadcrumb d-flex justify-content-between align-items-center" style="background: none;">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-bars" id="kanbasNavIcon" style="color: red;"></i>&nbsp;&nbsp;
+                    <li class="breadcrumb-item" style="padding: 0;"><a href="#" style="color: red">CS5610.11744.202310</a></li>
+                    <li style="padding: 0 10px;">></li>
+                    <li class="breadcrumb-item active" aria-current="page" style="padding: 0;">Grades</li>
+                </div>
+            </ol>
+        </nav>
+        <hr/>
+        <!-- Main Content Section -->
+        <div class="row"> 
+            <!-- First Column -->
+            <div class="col-md-2">
+                <ul class="wd-course-navigation d-none d-md-block">
+                    <small>  202310_2Fall2022Semest...</small>
+                    <li><a href="/kanbas/home.html">Home</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/kanbas/assignments/index.html">Assignments</a></li>                    
+                    <li class="wd-active"><a href="/kanbas/grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Microsoft Teams Meetings</a></li>
+                    <li><a href="#">FACT Report and Photo Roster</a></li>
+                    <li><a href="#">Disscussions</a></li>
+                    <li><a href="#">Annoucements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                </ul>
+            </div>
 
-                <td>
-                    <ul>
-                        <li><a href="/kanbas/home.html">Home</a></li>
-                        <li><a href="#">Modules</a></li>
-                        <li><a href="#">Piazza</a></li>
-                        <li><a href="#">Zoom Meeting</a></li>
-                        <li><a href="/kanbas/assignments/index.html">Assignments</a></li>
-                        <li><a href="#">Quizzes</a></li>
-                        <li><a href="/kanbas/grades.html">Grades</a></li>
-                        <li><a href="#">People</a></li>
-                        <li><a href="#">Panopto Video</a></li>
-                        <li><a href="#">Disscussions</a></li>
-                        <li><a href="#">Annoucements</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Rubrics</a></li>
-                        <li><a href="#">Outcomes</a></li>
-                        <li><a href="#">Collaborations</a></li>
-                        <li><a href="#">Syllabus</a></li>
-                        <li><a href="/kanbas/course/details.html">Settings</a></li>
-                    </ul>
-                </td>
-
-                <td>
-                    <div class="button-group">
-                        <select id="Gradebook">
-                            <option selected value="Gradebook">
-                                Gradebook</option>
-                        </select>
-                        <button type="button">Import</button>
-                        <select id="Export">
-                            <option selected value="Export">
-                                Export</option>
-                        </select>
-                        <button type="button">Configure</button>
-                    </div>
-
-                    <h2>Student Names</h2>
-                    <input id="text-fields-students" placeholder="Search Students"/><br/>
-                    <h2>Assignment Names</h2>
-                    <input id="text-fields-assignments" placeholder="Search Assignments"/><br/><br/>
-                    <button type="button">Apply Filters</button><br/><br/>
-
-                    <table border="1" cellspacing="1" width="100%">
-                        <tr>
-                            <td>
-                                <table border="1" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th align="center">Student Name</th>
-                                            <th align="center">A1 SETUP<br/>Out of 100</th>
-                                            <th align="center">A2 HTML<br/>Out of 100</th>
-                                            <th align="center">A3 CSS<br/>Out of 100</th>
-                                            <th align="center">A4 JAVASCRIPT<br/>Out of 100</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Alice Wonderland</td>
-                                            <td align="center"><input type="text" placeholder="99" size="2"></td>
-                                            <td align="center">98</td>
-                                            <td align="center">88</td>
-                                            <td align="center">90</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Princes Leia</td>
-                                            <td align="center">80</td>
-                                            <td align="center"><input type="text" placeholder="74" size="2"></td>
-                                            <td align="center">92</td>
-                                            <td align="center">86</td>
-                                        </tr>           
+            <div class="col-md-9">
+                <!-- Button and Dropdowns -->
+                <div class="d-flex justify-content-end mb-4">
+                    <button type="button" class="btn btn-light mr-2">
+                        <i class="fas fa-file-import"></i> Import
+                    </button>
                     
-                                        <tr>
-                                            <td>Han Solo</td>
-                                            <td align="center">82</td>
-                                            <td align="center">78</td>
-                                            <td align="center"><input type="text" placeholder="90" size="2"></td>
-                                            <td align="center">82</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Amanda Fet</td>
-                                            <td align="center">85</td>
-                                            <td align="center">89</td>
-                                            <td align="center">88</td>
-                                            <td align="center"><input type="text" placeholder="88" size="2"></td>
+                    <!-- Button group for Export dropdown with icon -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-file-export"></i> Export
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Export</a>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-light ml-2">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <h6 class="mb-2">Student Names</h6>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input type="text" id="text-fields-students" class="form-control" placeholder="Search Students">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light mb-4">
+                            <i class="fas fa-filter"></i> Apply Filters
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="mb-2">Assignment Names</h6>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input type="text" id="text-fields-assignments" class="form-control" placeholder="Search Assignments">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table -->
+                <div class="table-responsive custom-table">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="vertical-align: middle; text-align: left;">Student Name</th>
+                                <th style="text-align: center;">A1 SETUP<br/>Out of 100</th>
+                                <th style="text-align: center;">A2 HTML<br/>Out of 100</th>
+                                <th style="text-align: center;">A3 CSS<br/>Out of 100</th>
+                                <th style="text-align: center;">A4 BOOTSTRAP<br/>Out of 100</th>
+                                <th style="text-align: center;">A1 SETUP<br/>Out of 100</th>
+                                <th style="text-align: center;">A2 HTML<br/>Out of 100</th>
+                                <th style="text-align: center;">A3 CSS<br/>Out of 100</th>
+                                <th style="text-align: center;">A4 BOOTSTRAP<br/>Out of 100</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice Wonderland</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="99%" size="2"></td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>
+                            <tr>
+                                <td>Princes Leia</td>
+                                <td align="center">80%</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="74%" size="2"></td>
+                                <td align="center">92%</td>
+                                <td align="center">86%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>           
         
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Han Solo</td>
+                                <td align="center">82%</td>
+                                <td align="center">78%</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="90%" size="2"></td>
+                                <td align="center">82%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>
+                            <tr>
+                                <td>Amanda Fet</td>
+                                <td align="center">85%</td>
+                                <td align="center">89%</td>
+                                <td align="center">88%</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="88%" size="2"></td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Lana Do</td>
+                                <td align="center">100%</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="100%" size="2"></td>
+                                <td align="center">100%</td>
+                                <td align="center">100%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>    
+
+                            <tr>
+                                <td>Zhenyu Chen</td>
+                                <td align="center">100%</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="100%" size="2"></td>
+                                <td align="center">92%</td>
+                                <td align="center">96%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>   
+                            
+                            <tr>
+                                <td>Xue Han</td>
+                                <td align="center">99%</td>
+                                <td align="center">100%</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="91%" size="2"></td>
+                                <td align="center">100%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Sam Feng</td>
+                                <td align="center"><input type="text" class="rounded-input" placeholder="100%" size="2"></td>
+                                <td align="center">98.63%</td>
+                                <td align="center">89%</td>
+                                <td align="center">100%</td>
+                                <td align="center">98%</td>
+                                <td align="center">88%</td>
+                                <td align="center">90%</td>
+                                <td align="center">90%</td>
+                            </tr>
+                        </tbody>
                     </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>

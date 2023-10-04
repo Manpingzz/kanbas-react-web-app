@@ -1,0 +1,30 @@
+.wd-account-navigation a {
+    text-decoration: none;  
+    color: red;
+    display: block; /* To allow wrapping for longer texts */
+    padding-left: 8px;
+}
+
+.wd-account-navigation li {
+    margin-bottom: 17px;  
+    margin-top: 17px;
+}
+
+.wd-account-navigation li.wd-active a {
+    border-left: 1px solid black;
+    color: black; /* Black text for selected links */
+}
+
+
+.wd-account-navigation li.wd-active a {
+    padding-left: 9px;  
+}
+
+.wd-account-navigation {
+    width: 196px; /* Set width between 190 and 200 pixels */
+    list-style: none; /* Removing bullet points */
+    padding-left: 0; /* Removing default padding */
+    text-decoration: none;
+}
+
+

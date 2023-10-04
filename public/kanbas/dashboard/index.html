@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>dashboard</title>
+   <link rel="stylesheet" href="/styles.css" />
+   <link rel="stylesheet" href="index.css"/>
+   <!-- <link rel="stylesheet" href="../kanbasNavigation/index.css"/> -->
+   <!-- <link rel="stylesheet" href="../course/courseNavigation/index.css" /> -->
+   <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css" />
+   <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="d-block d-md-none">
+      <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
+      <a href="/Kanbas/Courses/CourseNavigation/index.html">Course Navigator</a>
+    </div>
+    
+    <div class="d-flex flex-row">
+        <div class="wd-bg-color-black d-none d-md-block" style="margin-right: 30px;">
+            <ul class="wd-kanbas-navigation">
+                <div style="display: inline-block; height: 100%; vertical-align: middle;">
+                    <img src="/images/neulogo.png" alt="NEU Logo" style="width: 70px;">
+                </div>
+            <li><a href="/kanbas/account/accountNavigation.html">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>Account</a></li>
+            <li class="wd-active"><a href="/kanbas/dashboard/index.html">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+            <li><a href="/kanbas/course/courseNavigation/index.html">
+                <i class="fa fa-book" aria-hidden="true"></i>Courses</a></li>
+            <li><a href="/kanbas/calendar/screen.html">
+                <i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+            <li><a href="#">
+                <i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a></li>
+            <li><a href="#">
+                <i class="fa fa-history" aria-hidden="true"></i>History</a></li>
+            <li><a href="#">
+                <i class="fa fa-desktop" aria-hidden="true"></i>Studio</a></li>
+            <li><a href="#">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>Commons</a></li>
+            <li><a href="#">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>Help</a></li>
+        </ul>
+    </div>
+      
+    <div class="container mt-5" style="margin-left: 120px;">
+        <h1 style="color: grey;">Dashboard</h1>
+        <hr/>
+        <h3 style="padding-left: 30px;">Published Courses(24)</h3>
+        <hr/>
+
+        <!-- Courses grid -->
+        <div class="d-flex flex-row flex-wrap justify-content-between">
+            
+            <div class="card course-card" style="width: 266px; position: relative;">
+                <div style="height:150px; background-color: #007BFF; position: relative;">
+                    <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+                </div>
+                <div class="card-body">
+                    <a href="#" style="white-space: nowrap;">
+                        <h6 class="card-title">CS4550 12631 Web Development</h6>
+                    </a>
+                    <p class="card-text" style="color: #b0b5b9;">CS4550.12631.202410<br/>
+                    202410_1 Fall2023 Semester Full Term<br/>
+                    <i class="fas fa-pen-square text-muted"></i></p>
+                </div>
+            </div>
+            
+            <div class="card course-card" style="width: 266px; position: relative;">
+                <div style="height:150px; background-color: #2088f8; position: relative;">
+                    <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+                </div>
+                <div class="card-body">
+                    <a href="#" style="white-space: nowrap;">
+                        <h6 class="card-title">CS4550 19753 Web Development</h6>
+                    </a>
+                    <p class="card-text" style="color: #b0b5b9;">CS4550.19753.202410<br/>
+                    202410_1 Fall 2023 Semester Full Term<br/>
+                    <i class="fas fa-pen-square text-muted"></i></p>
+                </div>
+            </div>
+
+        <div class="card course-card" style="width: 266px; position: relative;">
+            <div style="height:150px; background-color: #d9dbdd; position: relative;">
+                <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+            </div>  
+            <div class="card-body">
+                <a href="#" style="white-space: nowrap;">
+                    <h6 class="card-title">CS5610 20040 Web Development</h6>
+                </a>
+                <p class="card-text" style="color: #b0b5b9;">CS5610.20040.202310<br/>
+                202310_2 Fall 2022 Semester Full Term<br/>
+                <i class="fas fa-pen-square text-muted"></i></p>
+            </div>
+        </div>
+
+        <div class="card course-card" style="width: 266px; position: relative;">
+            <div style="height:150px; background-color: #b6b6b9; position: relative;">
+                <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+            </div>
+        
+            <div class="card-body">
+                <a href="#" style="white-space: nowrap;">
+                    <h6 class="card-title">CS5610 41752 Web Development</h6>
+                </a>
+                <p class="card-text" style="color: #b0b5b9;">CS5610.41752.202340<br/>
+                202340_2 Summer 1 2023 Semester Full Term<br/>
+                <i class="fas fa-pen-square text-muted"></i></p>
+            </div>
+        </div>
+
+        <div class="card course-card" style="width: 266px; position: relative;">
+            <div style="height:150px; background-color: #7f7fd9; position: relative;">
+                <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+            </div>
+        
+            <div class="card-body">
+                <a href="#" style="white-space: nowrap;">
+                    <h6 class="card-title">CS5610 11550 Web Development</h6>
+                </a>
+                <p class="card-text" style="color: #b0b5b9;">CS5610.11550.202410<br/>
+                202410_2 Fall 2023 Semester Full Term<br/>
+                <i class="fas fa-pen-square text-muted"></i></p>
+            </div>
+        </div>
+
+        <div class="card course-card" style="width: 266px; position: relative;">
+            <div style="height:150px; background-color: #6161a7; position: relative;">
+                <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+            </div>
+        
+            <div class="card-body">
+                <a href="#" style="white-space: nowrap;">
+                    <h6 class="card-title">CS5610 17387 Web Development</h6>
+                </a>
+                <p class="card-text" style="color: #b0b5b9;">CS5610.17387.202410<br/>
+                202410_2 Fall 2023 Semester Full Term<br/>
+                <i class="fas fa-pen-square text-muted"></i></p>
+            </div>
+        </div>
+        
+        <div class="card course-card" style="width: 266px; position: relative;">
+            <div style="height:150px; background-color: #457bef; position: relative;">
+                <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+            </div>
+        
+            <div class="card-body">
+                <a href="#" style="white-space: nowrap;">
+                    <h6 class="card-title">CS5610 17367 Web Development</h6>
+                </a>
+                <p class="card-text" style="color: #b0b5b9;">CS5610.17367.202410<br/>
+                202410_2 Fall 2023 Semester Full Term<br/>
+                <i class="fas fa-pen-square text-muted"></i></p>
+            </div>
+        </div>
+
+        <div class="card course-card" style="width: 266px; position: relative;">
+            <div style="height:150px; background-color: #b0b5b9; position: relative;">
+                <i class="fas fa-ellipsis-v" style="position: absolute; top: 10px; right: 10px; color: white;"></i>
+            </div>
+        
+            <div class="card-body">
+                <a href="#" style="white-space: nowrap;">
+                    <h6 class="card-title">CS4550 30086 Web Development</h6>
+                </a>
+                <p class="card-text" style="color: #b0b5b9;">CS4550.30086.202410<br/>
+                202330_1 Spring 2023 Semester Full Term<br/>
+                <i class="fas fa-pen-square text-muted"></i></p>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js for Bootstrap's JavaScript plugins -->
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
