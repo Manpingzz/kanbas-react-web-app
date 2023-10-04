@@ -41,24 +41,17 @@
     color: white;
 }
 
-
   .wd-kanbas-navigation li.wd-active a i.fa-user-circle {
   color: gray;
 }
 
-
-
-
 .course-card {
     min-width: 250px;
     max-width: 270px;
+    margin-top: 30px;  
+    margin-bottom: 30px;
 
 }
-.course-card {
-    margin: 0 7.5px 35px 7.5px; /* top, right, bottom, left */
-}
-
-
 
 /* Media query for when the window is at its widest (for 4 courses per row) */
 @media (min-width: 1084px) {

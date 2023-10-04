@@ -318,7 +318,6 @@ body {
       width: 100%;
   }
 }
-/* 默认情况下，所有元素都是可见的 */
 
 @media (max-width: 768px) {
   #kanbasNavIcon,

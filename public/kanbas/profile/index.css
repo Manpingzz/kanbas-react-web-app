@@ -28,7 +28,7 @@
 .wd-course-navigation a {
     color: red;
     text-decoration: none; /* Link text will not be underlined */
-    white-space: nowrap; /* This will ensure link text does not wrap */
+    white-space: normal;
     overflow: hidden;
     display: block; /* This will make entire area clickable */
     text-overflow: ellipsis; /* This will show dots if the link text is too long */

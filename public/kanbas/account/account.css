@@ -1,30 +1,37 @@
+
 .wd-account-navigation a {
     text-decoration: none;  
     color: red;
     display: block; /* To allow wrapping for longer texts */
-    padding-left: 8px;
+    padding-left: 8px; /* Default padding for all links */
 }
 
 .wd-account-navigation li {
-    margin-bottom: 17px;  
-    margin-top: 17px;
+    margin-bottom: 15px;  /* Adjusted spacing */
+    margin-top: 15px;    /* Adjusted spacing */
 }
 
 .wd-account-navigation li.wd-active a {
     border-left: 1px solid black;
     color: black; /* Black text for selected links */
-}
-
-
-.wd-account-navigation li.wd-active a {
-    padding-left: 9px;  
+    padding-left: 9px;  /* Adjusted padding for selected links */
 }
 
 .wd-account-navigation {
     width: 196px; /* Set width between 190 and 200 pixels */
-    list-style: none; /* Removing bullet points */
-    padding-left: 0; /* Removing default padding */
-    text-decoration: none;
+    list-style: none; 
+    padding-left: 0; 
 }
-
+.wd-account-navigation a:hover{
+    text-decoration: none;  
+    color: red;
+    display: block; /* To allow wrapping for longer texts */
+    padding-left: 8px;
+} 
+.wd-kanbas-navigation a:hover {
+    color: white;
+    text-decoration: none;
+    display: block; 
+    padding: 5px;
+}
 
