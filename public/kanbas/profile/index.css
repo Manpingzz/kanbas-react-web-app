@@ -1,0 +1,53 @@
+
+.wd-course-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 190px; /* Ensuring width is between 190px and 200px */
+    margin: 0px;
+    margin-left: 20px; /* This ensures there's 20px between Kanbas and selected link */
+}
+
+.wd-course-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wd-course-navigation li.wd-active {
+    border-left: 2px solid black;
+}
+
+.wd-course-navigation li.wd-active a {
+    color: black;
+    padding-left: 8px; /* Ensuring the padding-left of the active link's text is between 8px and 10px */
+}
+
+.wd-course-navigation a {
+    color: red;
+    text-decoration: none; /* Link text will not be underlined */
+    white-space: normal;
+    overflow: hidden;
+    display: block; /* This will make entire area clickable */
+    text-overflow: ellipsis; /* This will show dots if the link text is too long */
+}
+
+.wd-course-navigation a:hover {
+    text-decoration: none; /* Link text will not be underlined */
+    color: red;
+}
+
+.wd-kanbas-navigation a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.wd-course-navigation li + li {
+    margin-top: 15px; /* Ensuring spacing between links is between 15px and 20px */
+}
+
+.wd-course-navigation li:last-child a {
+    white-space: normal; /* Allowing the last link to wrap if it has long text */
+}

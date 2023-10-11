@@ -2,108 +2,146 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>home screen</title>
+   <title>profile screen</title>
+   <link rel="stylesheet" href="/styles.css" />
+   <link rel="stylesheet" href="../kanbasNavigation/index.css" />
+   <link rel="stylesheet" href="index.css" />
+   <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <style>
+    .btn a {
+        text-decoration: none;
+        color: inherit; 
+    }
+</style>
+
 </head>
 <body>
-<!-- <div id="root"></div> -->
-<table width="100%">
-    <tbody>
-        <tr valign="baseline">
-            <td>
-                <ul>
-                    <li><a href="/kanbas/accountNavigation.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="/kanbas/courseNavigation.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
+    <div class="d-flex flex-row">
+        <div class="wd-bg-color-black d-none d-md-block">
+            <ul class="wd-kanbas-navigation">
+                <div style="display: inline-block; height: 100%; vertical-align: middle;">
+                    <img src="/images/neulogo.png" alt="NEU Logo" style="width: 70px;">
+                </div>
+                <li class="wd-active"><a href="/kanbas/account/accountNavigation.html">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>Account</a></li>
+                <li><a href="/kanbas/dashboard/index.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+                <li"><a href="/kanbas/course/courseNavigation/index.html">
+                    <i class="fa fa-book" aria-hidden="true"></i>Courses</a></li>
+                <li><a href="/kanbas/calendar/screen.html">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+                <li><a href="#">
+                    <i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a></li>
+                <li><a href="#">
+                    <i class="fa fa-history" aria-hidden="true"></i>History</a></li>
+                <li><a href="#">
+                    <i class="fa fa-desktop" aria-hidden="true"></i>Studio</a></li>
+                <li><a href="#">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>Commons</a></li>
+                <li><a href="#">
+                    <i class="fa fa-question-circle-o" aria-hidden="true"></i>Help</a></li>
+            </ul>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <nav aria-label="breadcrumb" style="background: none; padding: 0;">
+                        <ol class="breadcrumb" style="background: none;">
+                            <i class="fas fa-bars" id="kanbasNavIcon" style="color: red; margin-right: 10px;"></i>
+                            <li class="breadcrumb-item" style="padding: 0;">
+                                <a href="#" style="color: black">Jose Annunziato's Profile</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    
+                </div>
+            </div>
+            <hr class="gray-line"/>
         
-            <td>
-                <ul>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="/kanbas/profile/index.html">Profile</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">ePortfolios</a></li>
-                    <li><a href="#">Shared Content</a></li>
-                    <li><a href="#">The Hub</a></li>
-                    <li><a href="#">Qwickly Course Tools</a></li>
-                    <li><a href="#">Global Annoucements</a></li>
-                </ul>
-            </td>
-
-            <td>
-                <h2>Jose Annunziato</h2>
-                
-                <form id="text-fields" action="/kanbas/profile/index.html">
-                    <label for="text-fields-name">Name:*<input name="fullName" type="text" value="Jose Annunziato"/></label>
-                    
-                    
-                    <label for="text-fields-pronouns">Pronouns:</label>
-                    <select id="select-one-pronouns">
-                        <option selected value="None">None</option>
-                    </select><br/><br/>
-                                     
-                    <label for="text-fields-title">Title:</label>
-                    <input id="text-fields-title"/><br/><br/>
-                
-                    <h3>Contact</h3>
-                    <label for="text-fields-contact">No registered services, you can add some on the <a href="#">settings</a> page.</label><br/><br/>
-                
-                    <h3>Contact</h3>
-                    <label for="text-fields-contact">No registered services, you can add some on the <a href="#">settings</a> page.</label><br/><br/>
-                
-                    <h3>Biography</h3>
-                    <label for="text-fields-biography">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</label><br/>
-                    <textarea name="biography" cols="39" rows="3" id="textarea">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
-                
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="https://www.youtube.com/@WebDevTV">Youtube</a>
-                            <a href="#" style="text-decoration: none; ">&#8594 Links to an external site.</a>
-                        </li><br/>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th align="center">Title</th>
-                                    <th align="center" colspan="2">URL</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td valign="middle" align="center">
-                                        <input type="title" placeholder="YouTube" id="text-fields-title"/>
-                                    </td>
-                                    <td align="center" valign="middle">&#8594;</td>
-                                    <td valign="middle">
-                                        <input type="url" placeholder="https://www.youtube.com" id="text-fields-url"/>
-                                    </td>
-                                    <td valign="middle">
-                                        <label for="text-fields-contact"><a href="#">Remove</a></label>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="row">
+                <div class="col-md-2">
+                    <ul class="wd-course-navigation d-none d-md-block">
+                        <li><a href="#">Notifications</a></li>
+                        <li class="wd-active"><a href="/kanbas/profile/index.html">Profile</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">ePortfolios</a></li>
+                        <li><a href="#">Shared Content</a></li>
+                        <li><a href="#">The Hub</a></li>
+                        <li><a href="#">Qwickly Course Tools</a></li>
+                        <li><a href="#">Global Annoucements</a></li>
+                            
                     </ul>
+                </div>
+
+                <div class="col-md-4">
                     
-                    <button>Add another link</button><br/>
-                    <button>Cancel</button>
-                    <button>Save Profile</button><br/>
-                    <button>Edit Profile</button>
-                    <button>Cancel Editing</button><br/>
-                </form>
-            </td>
-        </tr>
-    </tbody>
-</table>
-</body>
+                    <i class="fa fa-user d-block mx-auto" aria-hidden="true" style="font-size: 128px; color: gray;"></i>
+                    <form id="text-fields" action="/kanbas/profile/index.html">
+                        <div class="form-group">
+                            <label for="text-fields-name">Name:*</label>
+                            <input class="form-control" name="fullName" type="text" value="Jose Annunziato">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="text-fields-pronouns">Pronouns:</label>
+                            <select class="form-control" id="select-one-pronouns">
+                                <option selected value="None">None</option>
+                            </select>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="text-fields-title">Title:</label>
+                            <input class="form-control" id="text-fields-title">
+                        </div>
+                        <br/>
+                        <h5>Contact</h5>
+                        <p>No registered services, you can add some on the <a href="#" style="color: red; text-decoration: none;">settings</a> page.</p>
+                        <br/>
+                        <h5>Biography</h5>
+                        <textarea class="form-control" name="biography">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                        <br/>
+                        <h5>Links</h5>
+                        <div class="row">
+                            <div class="col-5 d-flex flex-column justify-content-center"> 
+                                <label for="text-fields-title" class="mb-1 text-center">Title</label> 
+                                <input class="form-control" type="title" placeholder="YouTube">
+                            </div>
+                            <div class="col-1 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="col-6 d-flex flex-column justify-content-center"> 
+                                <label for="text-fields-url" class="mb-1 text-center">URL</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="url" placeholder="https://www.youtube.com">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-times" style="color: red;"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="mt-3">
+                            <button class="btn btn-light">Add another link</button>
+                        </div>
+                        <hr style="background-color: gray;">
+                
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-light mr-2">Cancel</button>
+                            <button class="btn btn-danger">Save Profile</button>
+                        </div> 
+                    </form>
+                </div>               
+                <div class="col-md-2 d-flex align-items-start justify-content-center">
+                    <a href="/kanbas/profile/index.html" class="btn btn-light">
+                        <i class="fas fa-pencil-alt"></i> Cancel Editing
+                    </a>
+                </div>   
+            </div>
+        </div>
+    </div>
+</body>         
 
-
-
-
+           

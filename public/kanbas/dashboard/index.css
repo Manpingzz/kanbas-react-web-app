@@ -1,0 +1,75 @@
+
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    width: 80px;
+    text-align: center;
+  }
+  
+
+  .wd-kanbas-navigation li {
+    margin: 5px 0; /* Set margin between 5-10 pixels */
+    padding: 5px 0; /* Set padding between 5-10 pixels */
+    font-size: 0.8em;
+    background-color: black;
+  }
+  
+  .wd-kanbas-navigation li.wd-active {
+    background-color: white;
+  }
+  .wd-kanbas-navigation li.wd-active a {
+    color: red;
+  }
+  
+  .wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+    display: block; 
+    padding: 5px; /* Additional padding for links */
+}
+  
+  .wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px; 
+    display: block;
+    text-align: center;
+  }
+
+  .wd-kanbas-navigation li a i.fa-user-circle {
+    color: white;
+}
+
+  .wd-kanbas-navigation li.wd-active a i.fa-user-circle {
+  color: gray;
+}
+
+.course-card {
+    min-width: 250px;
+    max-width: 270px;
+    margin-top: 30px;  
+    margin-bottom: 30px;
+
+}
+
+/* Media query for when the window is at its widest (for 4 courses per row) */
+@media (min-width: 1084px) {
+    .course-card:nth-child(4n+1) {
+        clear: left;
+    }
+}
+
+/* Media query for 3 courses per row */
+@media (min-width: 813px) and (max-width: 1083px) {
+    .course-card:nth-child(3n+1) {
+        clear: left;
+    }
+}
+
+/* Media query for 2 courses per row */
+@media (min-width: 542px) and (max-width: 812px) {
+    .course-card:nth-child(2n+1) {
+        clear: left;
+    }
+}
