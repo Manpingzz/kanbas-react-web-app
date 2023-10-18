@@ -40,11 +40,11 @@ function Home() {
                             <i className={button.icon}></i> {button.text}
                         </Link>
                     ))}
-
+                    <br/>
                     {/* Course Status section, To Do section, Coming Up section ... */}
                     <div className="mb-2">
                         <h6>To Do</h6>
-                        <hr />
+                        <hr style={{ marginTop: '6px' }} />
                         <div className="d-none d-lg-block" style={{ position: 'relative' }}>
                             <i className="fa-solid fa-circle" style={{ color: 'red', marginRight: '10px' }}></i>
                             <span style={{ color: 'red', fontSize: '1rem', fontWeight: 500 }}>Grade A1- ENV + HTML</span>
@@ -66,7 +66,7 @@ function Home() {
                             </span>
                             <i className="fas fa-times" style={{ color: 'gray', position: 'absolute', top: '0', right: '0' }}></i>
                         </div>
-                    </div>
+                    </div><br/>
 
                     <div className="mb-2">
                         <div className="coming-up sidebar_comingUpContainer">
@@ -74,11 +74,13 @@ function Home() {
                                 <h6 className="coming-up-header" style={{ whiteSpace: 'nowrap' }}>
                                     <span tabIndex="-1">Coming Up</span>
                                 </h6>
+                               
                                 <a className="view-calendar-link" href="#" style={{ fontSize: '0.8rem', whiteSpace: 'nowrap', textDecoration: 'none' }}>
                                     <i className="fa fa-calendar" style={{ color: 'black', fontSize: 'inherit', paddingRight: '6px'  }}></i>
                                     <span style={{ color: 'red' }}>View Calendar</span>
                                 </a>
                             </div>
+                            <hr style={{ marginTop: '6px' }} />
                             <div className="d-none d-lg-block">
                                 <i className="fa fa-calendar" style={{ color: 'black', paddingRight: '6px' }}></i>
                                 <a href="#" style={{ color: 'red', textDecoration: 'none' }}>Lecture</a><br />

@@ -9,9 +9,7 @@ function ModuleList() {
     const modules = db.modules;
 
     return (
-        <div className="row">
-            {/* <div className="col-md-11"> */}
-       
+        <div>
             <div className="wd-flex-grow-1 d-flex align-items-center justify-content-end">
                 <button className="btn btn-light btn-sm">
                     Collapse All
