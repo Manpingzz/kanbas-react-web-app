@@ -8,8 +8,8 @@
 }
 
 .wd-kanbas-navigation li {
-  margin: 5px 0; /* Set margin between 5-10 pixels */
-  padding: 5px 0; /* Set padding between 5-10 pixels */
+  margin: 5px 0; 
+  padding: 5px 0; 
   font-size: 0.8em;
   background-color: black;
   display: flex;
@@ -28,7 +28,7 @@
   color: white;
   text-decoration: none;
   display: block; 
-  padding: 5px; /* Additional padding for links */
+  padding: 5px; 
 }
 
 .wd-kanbas-navigation a i {
@@ -49,14 +49,11 @@ color: gray;
 }
 
 .image-fluid {
-  max-width: 100%; /* This will make the image responsive, adjusting its width to the parent element */
-  height: auto; /* This will maintain the image's aspect ratio */
+  max-width: 100%; 
+  height: auto; 
 }
 .wd-kanbas-navigation ul {
   padding-left: 0;
 }
-
-
-
 
 

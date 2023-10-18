@@ -1,0 +1,14 @@
+.gray-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    background-color: #f1f1f1; 
+    border: none;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .gray-button:hover {
+    background-color: #ddd; 
+  }

@@ -6,12 +6,12 @@ function KanbasNavigation() {
     const navLinks = [
         { name: "Account", path: "/Kanbas/Account", icon: "fa-user-circle" },
         { name: "Dashboard", path: "/Kanbas/Dashboard", icon: "fa-tachometer-alt" },
-        { name: "Courses", path: "/Kanbas/Courses", icon: "fa-book" },
+        { name: "Courses", path: "/Kanbas/Course", icon: "fa-book" },
         { name: "Calendar", path: "/Kanbas/Calendar", icon: "fa-calendar" },
         { name: "Inbox", path: "/Kanbas/Inbox", icon: "fa-inbox" },
         { name: "History", path: "/Kanbas/History", icon: "fa-history" },
         { name: "Studio", path: "/Kanbas/Studio", icon: "fa-desktop" },
-        { name: "Commons", path: "/Kanbas/Commons", icon: "fa-sign-out-alt" },
+        { name: "Commons", path: "/Kanbas/Commons", icon: "fa-sign-out" },
         { name: "Help", path:"/Kanbas/Help", icon:"fa-question-circle"},
     ];
 

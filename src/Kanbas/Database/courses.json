@@ -1,22 +1,57 @@
 [
     {
-      "_id": "RS101",
+      "_id": "CS01",
       "name": "Rocket Propulsion",
-      "number": "RS4550",
+      "number": "CS4550",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15"
     },
     {
-      "_id": "RS102",
+      "_id": "CS02",
       "name": "Aerodynamics",
-      "number": "RS4560",
+      "number": "CS4560",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15"
     },
     {
-      "_id": "RS103",
+      "_id": "CS03",
       "name": "Spacecraft Design",
-      "number": "RS4570",
+      "number": "CS4570",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    {
+      "_id": "CS04",
+      "name": "AI Design",
+      "number": "CS4580",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    {
+      "_id": "CS05",
+      "name": "Web Development",
+      "number": "CS4590",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    {
+      "_id": "CS06",
+      "name": "Data Mining",
+      "number": "CS4600",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    {
+      "_id": "CS07",
+      "name": "Mobile Development",
+      "number": "CS4610",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    {
+      "_id": "CS08",
+      "name": " Database",
+      "number": "CS4620",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15"
     }
