@@ -14,7 +14,7 @@ function ArrayStateVariable() {
             <h2>Array State Variable</h2>
             <button className="btn btn-success"
                 onClick={addElement}>Add Element</button>
-            <table style={{ width: '15%', marginTop: '15px', borderCollapse: 'collapse' }}>                    
+            <table style={{ width: '15%', marginTop: '10px', borderCollapse: 'collapse' }}>                    
             <tbody>
                     {array.map((item, index) => (
                         <tr key={index}>
