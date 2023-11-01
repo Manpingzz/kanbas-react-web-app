@@ -1,12 +1,14 @@
-[
-    { "_id": "A101", "title": "Propulsion Assignment", "course": "CS01" },
-    { "_id": "A102", "title": "Combustion Analysis", "course": "CS01" },
-    { "_id": "A103", "title": "Nozzle Design Project", "course": "CS01" },
-    { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS02" },
-    { "_id": "A202", "title": "Flow Analysis", "course": "CS02" },
-    { "_id": "A203", "title": "Heating Analysis", "course": "CS02" },
-    { "_id": "A301", "title": "Structural Design Task", "course": "CS03" },
-    { "_id": "A302", "title": "Orbital Calculations", "course": "CS03" },
-    { "_id": "A303", "title": "Systems Engineering Exam", "course": "CS03" }
+
+  
+  [
+    { "_id": "A101", "title": "Propulsion Assignment", "course": "CS01", "points": 100, "dueDate": "2023-11-10" },
+    { "_id": "A102", "title": "Combustion Analysis", "course": "CS01", "points": 100, "dueDate": "2023-11-15" },
+    { "_id": "A103", "title": "Nozzle Design Project", "course": "CS01", "points": 100, "dueDate": "2023-11-20" },
+    { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS02", "points": 100, "dueDate": "2023-12-01" },
+    { "_id": "A202", "title": "Flow Analysis", "course": "CS02", "points": 100, "dueDate": "2023-12-05" },
+    { "_id": "A203", "title": "Heating Analysis", "course": "CS02", "points": 100, "dueDate": "2023-12-10" },
+    { "_id": "A301", "title": "Structural Design Task", "course": "CS03", "points": 100, "dueDate": "2023-12-15" },
+    { "_id": "A302", "title": "Orbital Calculations", "course": "CS03", "points": 100, "dueDate": "2023-12-20" },
+    { "_id": "A303", "title": "Systems Engineering Exam", "course": "CS03", "points": 100, "dueDate": "2023-12-25" }
   ]
   

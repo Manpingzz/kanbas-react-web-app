@@ -10,12 +10,11 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
 
-
-function Courses() {
+function Courses({courses}) {
     const { courseId } = useParams();
     const {pathname} = useLocation();
-    const [empty, kanbas, courses, id, screen] = pathname.split("/");
-    const course = db.courses.find((course) => course._id === courseId);
+    const [empty, kanbas, pathCourses, id, screen] = pathname.split("/");
+    const course = courses.find((course) => course._id === courseId);
 
     return (
         <div className="row">
@@ -63,6 +62,7 @@ function Courses() {
                         path="Assignments/:assignmentId"
                         element={<AssignmentEditor />}
                     />
+                    
                     <Route path="Grades" element={<Grades />} />
                 </Routes>
             </div>

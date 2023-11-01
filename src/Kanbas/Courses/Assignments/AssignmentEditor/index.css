@@ -1,0 +1,8 @@
+.date-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.date-input-container .fa-calendar {
+    margin-left: 5px;  
+}

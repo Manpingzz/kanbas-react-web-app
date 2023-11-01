@@ -14,8 +14,8 @@ function CourseNavigation() {
   const { pathname } = useLocation();
 
   return (
-    <div class="row">
-      <div class="col-md-2">
+    <div className="row">
+      <div className="col-md-2">
         <div className="wd-course-navigation d-none d-md-block">
           {links.map((link, index) => (
             <Link
