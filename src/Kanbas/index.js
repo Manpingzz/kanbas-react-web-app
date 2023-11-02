@@ -23,7 +23,7 @@ function Kanbas() {
       setCourses([...courses,
       {
          ...course,
-         _id: new Date().getTime()
+         _id: new Date().getTime().toString()
       }]);
    };
 

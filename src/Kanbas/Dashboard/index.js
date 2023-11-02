@@ -62,7 +62,8 @@ function Dashboard(
         <hr />
         <div className="d-flex flex-row flex-wrap">
           {courses.map((course, index) => (
-            <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="course-card">
+            <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} 
+              className="course-card">
               <button className="btn btn-success" style={{ marginRight: "8px" }}
                 onClick={(event) => {
                   event.preventDefault();

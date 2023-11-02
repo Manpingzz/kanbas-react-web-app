@@ -10,9 +10,9 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
 
-function Courses({courses}) {
+function Courses({ courses }) {
     const { courseId } = useParams();
-    const {pathname} = useLocation();
+    const { pathname } = useLocation();
     const [empty, kanbas, pathCourses, id, screen] = pathname.split("/");
     const course = courses.find((course) => course._id === courseId);
 
@@ -24,9 +24,9 @@ function Courses({courses}) {
                         style={{ background: 'none', listStyleType: 'none' }}>
                         <div className="d-flex align-items-center">
                             <i className="fas fa-bars" id="kanbasNavIcon" style={{ color: 'red' }}></i>&nbsp;&nbsp;
-                            <li className="breadcrumb-item" style={{ padding: 0}}>
-                                <Link to={`/some/path/${courseId}`} style={{ color: 'red', textDecoration: 'none' }}> 
-                                {`${course.number} ${courseId}`}
+                            <li className="breadcrumb-item" style={{ padding: 0 }}>
+                                <Link to={`/some/path/${courseId}`} style={{ color: 'red', textDecoration: 'none' }}>
+                                    {`${course.number} ${courseId}`}
                                 </Link>
                             </li>
                             <li style={{ padding: '0 10px' }}>
@@ -42,17 +42,22 @@ function Courses({courses}) {
                         </div>
                     </ol>
                 </nav>
-                
+
                 <hr />
             </div>
 
             <div className="col-md-2">
-                <small style={{ marginLeft: '22px' }}> {course.number} Fall...</small>
+
+                <small style={{ marginLeft: '22px' }}> {course.number} {course.name} </small>
                 <CourseNavigation />
             </div>
 
             {/* Second Column */}
             <div className="col-md-9">
+                <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} style={{ textDecoration: 'none' }}>
+                    {course.number} {course.name}
+                </Link>
+
                 <Routes>
                     <Route path="/" element={<Navigate to="Home" />} />
                     <Route path="Home" element={<Home />} />
@@ -62,7 +67,7 @@ function Courses({courses}) {
                         path="Assignments/:assignmentId"
                         element={<AssignmentEditor />}
                     />
-                    
+
                     <Route path="Grades" element={<Grades />} />
                 </Routes>
             </div>
