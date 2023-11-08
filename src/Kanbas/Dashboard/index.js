@@ -50,7 +50,7 @@ function Dashboard(
           <button className="btn btn-warning" style={{ marginTop: "6px", marginRight: "8px" }} onClick={addNewCourse}>
             Add
           </button>
-          <button className="btn btn-info" style={{ marginTop: "6px" }} onClick={updateCourse}>
+          <button className="btn btn-info" style={{ marginTop: "6px" }} onClick={() => updateCourse(course)}>
             Update
           </button>
         </div>

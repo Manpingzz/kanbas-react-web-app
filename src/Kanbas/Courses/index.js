@@ -1,5 +1,5 @@
 import db from "../../Kanbas/Database";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navigate, Route, Routes, useParams, Link, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import "./CourseNavigation/index.css";
@@ -8,13 +8,27 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import axios from "axios";
 
 
-function Courses({ courses }) {
+function Courses() {
     const { courseId } = useParams();
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
     const { pathname } = useLocation();
     const [empty, kanbas, pathCourses, id, screen] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
+    // const course = courses.find((course) => course._id === courseId);
+
+    useEffect(() => {
+        findCourseById(courseId);
+      }, [courseId]);
+    
 
     return (
         <div className="row">

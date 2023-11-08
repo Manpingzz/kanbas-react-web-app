@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import KanbasNavigation from "./KanbasNavigation";
 import Courses from "./Courses";
@@ -8,31 +8,61 @@ import db from "./Database";
 import store from "./store";
 import { Provider } from "react-redux";
 import AssignmentEditor from "./Courses/Assignments/AssignmentEditor";
+import axios from "axios";
 
 
 function Kanbas() {
    const [courses, setCourses] = useState(db.courses);
+
+   const URL = "http://localhost:4000/api/courses";
+
+   const findAllCourses = async () => {
+      const response = await axios.get(URL);
+      setCourses(response.data);
+   };
+
+   useEffect(() => {
+      findAllCourses();
+   }, []);
+
 
    const [course, setCourse] = useState({
       name: "New Course", number: "New Number",
       startDate: "2023-09-10", endDate: "2023-12-15",
    });
 
+   // add a new course
+   const addNewCourse = async () => {
+      try {
+         const response = await axios.post(URL, course);
+         const newCourse = await response.data;
+         setCourses([...courses, newCourse]);
+         setCourse({
+            name: "",
+            number: "",
+            startDate: "2023-09-10",
+            endDate: "2023-12-15",
+         })
+      } catch (e) {
+         console.log("Error in adding a new course", e);
+      }
+   }
 
-   const addNewCourse = () => {
-      setCourses([...courses,
-      {
-         ...course,
-         _id: new Date().getTime().toString()
-      }]);
-   };
-
-   const deleteCourse = (courseId) => {
+   // delete a course
+   const deleteCourse = async (courseId) => {
+      const response = await axios.delete(
+        `${URL}/${courseId}`
+      );  
       setCourses(courses.filter((course) => course._id !== courseId));
    };
 
-   const updateCourse = () => {
-      setCourses(
+   // update a course
+   const updateCourse = async (course) => {
+      const response = await axios.put(
+        `${URL}/${course._id}`,
+        course
+      );
+        setCourses(
          courses.map((c) => {
             if (c._id === course._id) {
                return course;
@@ -42,6 +72,7 @@ function Kanbas() {
          })
       );
    };
+   
    return (
       <Provider store={store}>
 
