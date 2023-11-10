@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
@@ -7,46 +7,45 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 
 
 function ModuleList() {
     const { courseId } = useParams();
+
+    useEffect(() => {
+        client.findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
+
+
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
-    // const [modules, setModules] = useState(db.modules);
-    // const [module, setModule] = useState({
-    //     name: "New Module",
-    //     description: "New Description",
-    //     course: courseId,
-    // });
 
+    const handleAddModule = () => {
+        client.createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
 
-    // const addModule = (module) => {
-    //     setModules([
-    //         { ...module, _id: new Date().getTime().toString() },
-    //         ...modules,
-    //     ]);
-    // };
-    // const deleteModule = (moduleId) => {
-    //     setModules(modules.filter(
-    //         (module) => module._id !== moduleId));
-    // };
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
 
-    // const updateModule = () => {
-    //     setModules(
-    //         modules.map((m) => {
-    //             if (m._id === module._id) {
-    //                 return module;
-    //             } else {
-    //                 return m;
-    //             }
-    //         })
-    //     );
-    // } 
-
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+      };
+    
 
     return (
         <div>
@@ -79,11 +78,11 @@ function ModuleList() {
                 <ul className="list-group">
                     <li className="list-group-item">
                         <div className="d-flex justify-content-start align-items-center">
-                            <input 
-                                className="form-control w-50" 
-                                style={{ marginRight: "8px" }} 
-                                value={module.name} 
-                                onChange={(e) => 
+                            <input
+                                className="form-control w-50"
+                                style={{ marginRight: "8px" }}
+                                value={module.name}
+                                onChange={(e) =>
                                     dispatch(setModule({ ...module, name: e.target.value }))
                                 }
                             />
@@ -99,43 +98,15 @@ function ModuleList() {
 
                         <div className="mt-2 d-flex justify-content-start align-items-center">
                             <button className="btn btn-success"
-                                onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                                // onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                                onClick={handleAddModule}>
                                 Add
                             </button>
                             <button className="btn btn-primary ms-2"
-                                onClick={() => dispatch(updateModule(module))}>
+                                onClick={handleUpdateModule}>
                                 Update
                             </button>
                         </div>
-
-                            {/* <button className="btn btn-success"
-                                onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-                                Add
-                            </button>
-                            
-                            <button className="btn btn-primary" style={{ marginRight: "8px" }}
-                                onClick={() => dispatch(updateModule(module))}>
-                                Update
-                            </button>
-
-                            <input className="form-control w-50"
-                                style={{ marginRight: "8px" }}
-                                value={module.name}
-                                onChange={(e) => 
-                                    dispatch(setModule({ ...module, name: e.target.value }))
-                    
-                            }/>
-
-                        </div>
-                        <div className="mt-2">
-                            <textarea
-                                className="form-control w-50"
-                                value={module.description}
-                                onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))
-                                }
-                            />
-                        </div> */}
-
                     </li>
                 </ul>
 
@@ -164,7 +135,9 @@ function ModuleList() {
                                         </button>
 
                                         <button className="btn btn-danger" style={{ marginRight: "8px" }}
-                                            onClick={() => dispatch(deleteModule(module._id))}>
+                                            // onClick={() => dispatch(deleteModule(module._id))}>
+                                            onClick={() => handleDeleteModule(module._id)}>
+
                                             Delete
                                         </button>
 

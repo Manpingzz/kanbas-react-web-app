@@ -16,9 +16,15 @@ function Kanbas() {
 
    const URL = "http://localhost:4000/api/courses";
 
+
    const findAllCourses = async () => {
-      const response = await axios.get(URL);
-      setCourses(response.data);
+      try {
+         const response = await axios.get(URL);
+         setCourses(response.data);
+      } catch (error) {
+         console.error("Error fetching courses:", error);
+         
+      }
    };
 
    useEffect(() => {
