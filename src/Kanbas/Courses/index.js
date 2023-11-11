@@ -14,12 +14,12 @@ import axios from "axios";
 function Courses() {
     const { courseId } = useParams();
     const [course, setCourse] = useState({});
-    // const findCourseById = async (courseId) => {
-    //     const response = await axios.get(
-    //         `${URL}/${courseId}`
-    //     );
-    //     setCourse(response.data);
-    // };
+
+    // const URL = "http://localhost:4000/api/courses";
+    
+    const API_BASE = process.env.REACT_APP_API_BASE;
+
+    const URL = `${API_BASE}/courses`;
 
     const findCourseById = async (courseId) => {
         try {
@@ -29,18 +29,18 @@ function Courses() {
             console.error("Error fetching course:", error);
         }
     };
-    
+
 
     useEffect(() => {
         findCourseById(courseId);
-      }, [courseId]);
+    }, [courseId]);
 
     const { pathname } = useLocation();
     const [empty, kanbas, pathCourses, id, screen] = pathname.split("/");
     // const course = courses.find((course) => course._id === courseId);
 
-   
-    
+
+
 
     return (
         <div className="row">
