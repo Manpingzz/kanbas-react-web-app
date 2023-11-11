@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
@@ -7,45 +7,26 @@ import {
     addAssignment,
     deleteAssignment,
     updateAssignment,
-    setAssignments,
-    selectAssignment,
-    setNewAssignment,
+    setAssignment,
 } from "./assignmentsReducer";
-import * as client from "./client";
-import { findAssignmentsForCourse } from "./client";
 
 function Assignments() {
-    const { courseId } = useParams();
-    const dispatch = useDispatch();
+    const { courseId, assignmentId } = useParams();
 
     const assignments = useSelector((state) => state.assignmentsReducer.assignments);
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
-
-    useEffect(() => {
-        findAssignmentsForCourse(courseId).then((assignments) => {
-            dispatch(setAssignments(assignments));
-        });
-    }, [courseId, dispatch]);
-
     // Using the redux store data for filtering
-
-    let courseAssignments = [];
-
-    try {
-        courseAssignments = assignments.filter(
-            (assignment) => assignment.course === courseId
-        );
-    } catch (error) {
-        console.error("Error filtering assignments: ", error);
-
-    }
-
+    const courseAssignments = assignments.filter(
+        (assignment) => assignment.course === courseId);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const handleDelteAssignment = (assignmentId) => {
-        client.deleteAssignment(assignmentId).then((status) => {
+    const handleDelete = (assignmentId) => {
+        const confirmDelete = window.confirm("Are you sure you want to delete this assignment?");
+        if (confirmDelete) {
             dispatch(deleteAssignment(assignmentId));
-        });
+            navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+        }
     };
 
 
@@ -56,10 +37,11 @@ function Assignments() {
                     <input type="text" className="form-control w-25" placeholder="Search for Assignment" />
                     <div>
                         <button className="btn btn-light me-2">+Group</button>
-
-                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/Create`}
-                        >
-                            <button className="btn btn-danger" >+Assignment</button>
+                        {/* <Link to={`/Kanbas/Courses/${courseId}/AssignmentEditor`}>
+                        <button className="btn btn-danger">+Assignment</button>
+                    </Link> */}
+                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/Create`}>
+                            <button className="btn btn-danger">+Assignment</button>
                         </Link>
 
 
@@ -110,9 +92,9 @@ function Assignments() {
 
                                 <div className="d-flex align-items-center">
                                     <i className="fas fa-check-circle" style={{ color: 'green', marginRight: '18px' }}></i>
-
-                                    <button onClick={(e) => { e.preventDefault(); handleDelteAssignment(assignment._id); }}
-                                        className="btn btn-danger" style={{ marginRight: '12px' }}>
+                                    
+                                    <button onClick={(e) => { e.preventDefault(); handleDelete(assignment._id); }} 
+                                        className="btn btn-danger" style={{marginRight: '12px'}}>
                                         Delete
                                     </button>
                                     <i className="fas fa-ellipsis-v" style={{ color: 'black', marginTop: "26px" }}></i>

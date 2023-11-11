@@ -6,13 +6,12 @@ import {
   addAssignment,
   deleteAssignment,
   updateAssignment,
-  setAssignments,
-  selectAssignment
+  setAssignment,
 
 } from "../assignmentsReducer";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
-import * as client from "../client";
+
+
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
@@ -43,28 +42,23 @@ function AssignmentEditor() {
     }));
   };
 
-  const handleSave = async () => {
-    try {
-      if (assignmentId === "Create") {
-        const newAssignment = {
-          ...assignment,
-          course: courseId
-        };
-  
-        const response = await client.createAssignment(courseId, newAssignment);
-        dispatch(addAssignment(response.data));
-      } else {
-        const updatedAssignment = { ...assignment, course: courseId };
-        const response = await client.updateAssignment(updatedAssignment);
-        dispatch(updateAssignment(response.data));
-      }
-  
-      navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-    } catch (error) {
-      console.error("Error saving assignment:", error);
+  const handleSave = () => {
+    if (assignmentId === "Create") {
+      const newAssignmentId = "A" + (allAssignments.length + 101);
+      const newAssignment = {
+        ...assignment,
+        _id: newAssignmentId,
+        course: courseId
+      };
+
+      dispatch(addAssignment(newAssignment));
+    } else {
+      const updatedAssignment = { ...assignment, course: courseId };
+      dispatch(updateAssignment(updatedAssignment));
     }
+
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
-  
 
 
   return (
