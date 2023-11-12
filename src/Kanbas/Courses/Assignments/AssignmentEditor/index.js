@@ -64,10 +64,10 @@ function AssignmentEditor() {
   const handleSave = async () => {
     if (assignmentId === "Create") {
       console.log("Creating New Assignment");
-      await handleAddAssignment(assignment); // 等待添加操作完成
+      await handleAddAssignment(assignment);
     } else {
       console.log("Updating assignment");
-      await handleUpdateAssignment(assignment); // 等待更新操作完成
+      await handleUpdateAssignment(assignment);
     }
 
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);

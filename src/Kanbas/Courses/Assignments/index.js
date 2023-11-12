@@ -22,7 +22,7 @@ function Assignments() {
     findAssignmentsForCourse(courseId).then((assignments) => {
       dispatch(setAssignments(assignments));
     });
-  }, [courseId]);
+  }, [courseId, dispatch]);
 
   const assignments = useSelector(
     (state) => state.assignmentsReducer.assignments
@@ -40,14 +40,6 @@ function Assignments() {
       dispatch(deleteAssignment(assignmentId));
     });
   };
-
-  // const handleDelete = (assignmentId) => {
-  //     const confirmDelete = window.confirm("Are you sure you want to delete this assignment?");
-  //     if (confirmDelete) {
-  //         dispatch(deleteAssignment(assignmentId));
-  //         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-  //     }
-  // };
 
   return (
     <div>
