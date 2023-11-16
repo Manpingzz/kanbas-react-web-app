@@ -11,7 +11,7 @@ import AssignmentEditor from "./Courses/Assignments/AssignmentEditor";
 import axios from "axios";
 
 function Kanbas() {
-  const [courses, setCourses] = useState(db.courses);
+  const [courses, setCourses] = useState([]);
 
   // const URL = "http://localhost:4000/api/courses";
   const API_BASE = process.env.REACT_APP_API_BASE;
