@@ -5,12 +5,9 @@ import * as client from "./client";
 import { useEffect, useState } from "react";
 function UserDetails() {
   const [user, setUser] = useState(null);
-  //   const [likes, setLikes] = useState([]);
+
   const { id } = useParams();
-  //   const fetchLikes = async () => {
-  //     const likes = await likesClient.findAlbumsThatUserLikes(id);
-  //     setLikes(likes);
-  //   };
+  
   const navigate = useNavigate();
   const fetchUser = async () => {
     const user = await client.findUserById(id);

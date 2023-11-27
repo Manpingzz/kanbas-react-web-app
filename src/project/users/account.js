@@ -195,6 +195,7 @@ function Account() {
           <input
             type="text"
             className="form-control"
+            placeholder="username"
             value={user.username}
             onChange={(e) => setUser({ ...user, username: e.target.value })}
           />
@@ -202,6 +203,7 @@ function Account() {
             <input
               type="text"
               className="form-control"
+              placeholder="First Name"
               value={user.firstName}
               onChange={(e) => setUser({ ...user, firstName: e.target.value })}
             />
@@ -210,6 +212,7 @@ function Account() {
             <input
               type="text"
               className="form-control"
+              placeholder="Last Name"
               value={user.lastName}
               onChange={(e) => setUser({ ...user, lastName: e.target.value })}
             />
@@ -226,6 +229,7 @@ function Account() {
             <input
               type="email"
               className="form-control"
+              placeholder="E-mail"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
             />
